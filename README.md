@@ -34,3 +34,7 @@ Links
 - [Official Discord Server](https://discord.gg/bJvqnhg)
 - [Twitter API Documentation](https://developer.twitter.com/en/docs/twitter-api)
 
+追記
+-----
+- api.add_list_membersを追加
+- paramsにおいてuser_idまたはscreen_nameは,区切りの文字列として渡すこと
