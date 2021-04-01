@@ -983,6 +983,17 @@ class API:
         )
 
     @payload('list')
+    def add_list_members(self, **kwargs):
+        """ :reference: https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create_all
+        """
+        return self.request(
+            'POST', 'lists/members/create_all', endpoint_parameters=(
+                'list_id', 'slug', 'user_id', 'screen_name',
+                'owner_screen_name', 'owner_id'
+            ), **kwargs
+        )
+
+    @payload('list')
     def remove_list_member(self, **kwargs):
         """ :reference: https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-destroy
         """
